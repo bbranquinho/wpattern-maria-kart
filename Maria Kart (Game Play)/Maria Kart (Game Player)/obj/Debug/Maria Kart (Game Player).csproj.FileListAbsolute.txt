@@ -1,0 +1,25 @@
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\bin\Debug\MariaKartGamePlayer.exe.config
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\obj\Debug\Maria Kart (Game Player).csprojResolveAssemblyReference.cache
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\obj\Debug\AddPlayer.baml
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\obj\Debug\MainWindow.baml
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\obj\Debug\PlayerWindow.baml
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\obj\Debug\SettingsWindow.baml
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\obj\Debug\AddPlayer.g.cs
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\obj\Debug\MainWindow.g.cs
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\obj\Debug\PlayerWindow.g.cs
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\obj\Debug\SettingsWindow.g.cs
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\obj\Debug\App.g.cs
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\obj\Debug\MariaKartGamePlayer_MarkupCompile.cache
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\bin\Debug\MariaKartGamePlayer.exe
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\bin\Debug\MariaKartGamePlayer.pdb
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\bin\Debug\Microsoft.Samples.Kinect.WpfViewers.dll
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\bin\Debug\System.Windows.Controls.dll
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\bin\Debug\Microsoft.Samples.Kinect.WpfViewers.pdb
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\obj\Debug\KinectControlResources.baml
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\obj\Debug\KinectWindow.baml
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\obj\Debug\KinectWindow.g.cs
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\obj\Debug\MariaKartGamePlayer.g.resources
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\obj\Debug\Maria_Kart__Game_Player_.Properties.Resources.resources
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\obj\Debug\Maria Kart (Game Player).csproj.GenerateResource.Cache
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\obj\Debug\MariaKartGamePlayer.exe
+D:\Projetos\maria-kart\Maria Kart (Game Play)\Maria Kart (Game Player)\obj\Debug\MariaKartGamePlayer.pdb

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6e8139a3682e4ae98f14a9f30384a199" Name="Diagram1">
+        <EntityTypeShape EntityType="MariaKartModel.CharacterEntity" Width="1.5" PointX="6.375" PointY="1" />
+        <EntityTypeShape EntityType="MariaKartModel.PlayerEntity" Width="1.5" PointX="0.75" PointY="1.125" />
+        <EntityTypeShape EntityType="MariaKartModel.RaceEntity" Width="1.5" PointX="3.5" PointY="0.875" />
+        <AssociationConnector Association="MariaKartModel.fk_tb_character_tb_race1" />
+        <AssociationConnector Association="MariaKartModel.fk_tb_race_tb_player" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

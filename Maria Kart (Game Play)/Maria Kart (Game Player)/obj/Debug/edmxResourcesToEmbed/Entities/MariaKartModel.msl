@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MariaKartModelStoreContainer" CdmEntityContainer="MariaKartEntities">
+    <EntitySetMapping Name="CharacterEntities">
+      <EntityTypeMapping TypeName="MariaKartModel.CharacterEntity">
+        <MappingFragment StoreEntitySet="tb_character">
+          <ScalarProperty Name="tb_race_id" ColumnName="tb_race_id" />
+          <ScalarProperty Name="picture" ColumnName="picture" />
+          <ScalarProperty Name="acceleration" ColumnName="acceleration" />
+          <ScalarProperty Name="breaking" ColumnName="breaking" />
+          <ScalarProperty Name="speed" ColumnName="speed" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlayerEntities">
+      <EntityTypeMapping TypeName="MariaKartModel.PlayerEntity">
+        <MappingFragment StoreEntitySet="tb_player">
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="rightHandDown" ColumnName="rightHandDown" />
+          <ScalarProperty Name="rightHandUp" ColumnName="rightHandUp" />
+          <ScalarProperty Name="leftHandDown" ColumnName="leftHandDown" />
+          <ScalarProperty Name="leftHandUp" ColumnName="leftHandUp" />
+          <ScalarProperty Name="picture" ColumnName="picture" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RaceEntities">
+      <EntityTypeMapping TypeName="MariaKartModel.RaceEntity">
+        <MappingFragment StoreEntitySet="tb_race">
+          <ScalarProperty Name="totalLaps" ColumnName="totalLaps" />
+          <ScalarProperty Name="bestLapsTime" ColumnName="bestLapsTime" />
+          <ScalarProperty Name="totalTime" ColumnName="totalTime" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="idPlayer" ColumnName="idPlayer" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

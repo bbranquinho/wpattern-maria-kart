@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MariaKartModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="MariaKartEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="CharacterEntities" EntityType="MariaKartModel.CharacterEntity" />
+    <EntitySet Name="PlayerEntities" EntityType="MariaKartModel.PlayerEntity" />
+    <EntitySet Name="RaceEntities" EntityType="MariaKartModel.RaceEntity" />
+    <AssociationSet Name="fk_tb_character_tb_race1" Association="MariaKartModel.fk_tb_character_tb_race1">
+      <End Role="tb_race" EntitySet="RaceEntities" />
+      <End Role="tb_character" EntitySet="CharacterEntities" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_race_tb_player" Association="MariaKartModel.fk_tb_race_tb_player">
+      <End Role="tb_player" EntitySet="PlayerEntities" />
+      <End Role="tb_race" EntitySet="RaceEntities" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CharacterEntity">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="speed" Nullable="false" />
+    <Property Type="Int32" Name="breaking" Nullable="false" />
+    <Property Type="Int32" Name="acceleration" Nullable="false" />
+    <Property Type="Binary" Name="picture" MaxLength="65535" FixedLength="false" />
+    <Property Type="Int32" Name="tb_race_id" Nullable="false" />
+    <NavigationProperty Name="Races" Relationship="MariaKartModel.fk_tb_character_tb_race1" FromRole="tb_character" ToRole="tb_race" />
+  </EntityType>
+  <EntityType Name="PlayerEntity">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="email" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Binary" Name="picture" MaxLength="65535" FixedLength="false" />
+    <NavigationProperty Name="Races" Relationship="MariaKartModel.fk_tb_race_tb_player" FromRole="tb_player" ToRole="tb_race" />
+    <Property Type="Double" Name="leftHandUp" />
+    <Property Type="Double" Name="leftHandDown" />
+    <Property Type="Double" Name="rightHandUp" />
+    <Property Type="Double" Name="rightHandDown" />
+    <Property Type="Int32" Name="age" />
+  </EntityType>
+  <EntityType Name="RaceEntity">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="idPlayer" Nullable="false" />
+    <Property Type="DateTime" Name="date" Nullable="false" annotation:StoreGeneratedPattern="Identity" Precision="0" />
+    <Property Type="Time" Name="totalTime" Nullable="false" Precision="0" />
+    <Property Type="Time" Name="bestLapsTime" Nullable="false" Precision="0" />
+    <Property Type="Int32" Name="totalLaps" Nullable="false" />
+    <NavigationProperty Name="Character" Relationship="MariaKartModel.fk_tb_character_tb_race1" FromRole="tb_race" ToRole="tb_character" />
+    <NavigationProperty Name="Player" Relationship="MariaKartModel.fk_tb_race_tb_player" FromRole="tb_race" ToRole="tb_player" />
+  </EntityType>
+  <Association Name="fk_tb_character_tb_race1">
+    <End Type="MariaKartModel.RaceEntity" Role="tb_race" Multiplicity="1" />
+    <End Type="MariaKartModel.CharacterEntity" Role="tb_character" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_race">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tb_character">
+        <PropertyRef Name="tb_race_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_race_tb_player">
+    <End Type="MariaKartModel.PlayerEntity" Role="tb_player" Multiplicity="1" />
+    <End Type="MariaKartModel.RaceEntity" Role="tb_race" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_player">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tb_race">
+        <PropertyRef Name="idPlayer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

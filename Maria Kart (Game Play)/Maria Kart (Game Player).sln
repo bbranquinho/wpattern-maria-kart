@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maria Kart (Game Player)", "Maria Kart (Game Player)\Maria Kart (Game Player).csproj", "{7C2406C0-303B-4F5D-90F7-9505F5B587BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Samples.Kinect.WpfViewers", "..\Maria Kart (Kinect Explorer)\KinectWpfViewers\Microsoft.Samples.Kinect.WpfViewers.csproj", "{4DE23893-27E7-423F-9BB6-BA21DAC2C45E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CC8B03AE-44CC-4C27-A304-C2C64217D61D}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Items\der_maria_kart.mwb = Solution Items\der_maria_kart.mwb
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assemblies", "Assemblies", "{57338A1E-2762-456A-8F9B-D8A824AA1A09}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\System.Windows.Controls.dll = Assemblies\System.Windows.Controls.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C2406C0-303B-4F5D-90F7-9505F5B587BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C2406C0-303B-4F5D-90F7-9505F5B587BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C2406C0-303B-4F5D-90F7-9505F5B587BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C2406C0-303B-4F5D-90F7-9505F5B587BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DE23893-27E7-423F-9BB6-BA21DAC2C45E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DE23893-27E7-423F-9BB6-BA21DAC2C45E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DE23893-27E7-423F-9BB6-BA21DAC2C45E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DE23893-27E7-423F-9BB6-BA21DAC2C45E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

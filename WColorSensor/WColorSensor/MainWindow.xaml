@@ -1,0 +1,42 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="WColorSensor.MainWindow"
+        Title="WColorSensor" Height="501.365" Width="753.896" Icon="Images/PatternRecognition.ico" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DataGrid x:Name="DataGridColor" HorizontalAlignment="Left" Margin="299,10,0,0" VerticalAlignment="Top" Height="206" Width="246"/>
+        <Button x:Name="ButtonOpenSerialPort"  Content="Open Connection" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="284" Click="ButtonOpenSerialPort_Click"/>
+        <TextBox x:Name="TextBoxSerialPort" HorizontalAlignment="Left" Height="23" Margin="45,40,0,0" TextWrapping="Wrap" Text="COM1" VerticalAlignment="Top" Width="65"/>
+        <Label x:Name="LabelPort" Content="Port:" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LabelBaudRate" Content="Baud Rate:" HorizontalAlignment="Left" Margin="115,38,0,0" VerticalAlignment="Top" Width="71"/>
+        <ComboBox x:Name="ComboBoxBaudRate" HorizontalAlignment="Left" Margin="186,40,0,0" VerticalAlignment="Top" Width="108" SelectedIndex="3">
+            <System:Int32>1200</System:Int32>
+            <System:Int32>2400</System:Int32>
+            <System:Int32>4800</System:Int32>
+            <System:Int32>9600</System:Int32>
+            <System:Int32>19200</System:Int32>
+            <System:Int32>38400</System:Int32>
+            <System:Int32>57600</System:Int32>
+            <System:Int32>115200</System:Int32>
+            <System:Int32>230400</System:Int32>
+        </ComboBox>
+        <Label Name="LabelColor" Content="Color:" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <TextBox Name="TextBoxColor" HorizontalAlignment="Left" Height="23" Margin="120,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" IsEnabled="False" Text="White" />
+        <Label Name="LabelNumberSamples" Content="Nº Samples:" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <TextBox Name="TextBoxNumberSamples" HorizontalAlignment="Left" Height="23" Margin="120,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Text="10" IsEnabled="False"/>
+        <TextBox Name="TextBoxColorDelay" HorizontalAlignment="Left" Height="23" Margin="120,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Text="15" IsEnabled="False"/>
+        <Label Name="LabelColorDelay" Content="Color Delay (ms):" HorizontalAlignment="Left" Margin="10,132,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <Label Name="LabelSampleDelay" Content="Sample Delay (ms):" HorizontalAlignment="Left" Margin="10,163,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <TextBox Name="TextBoxSampleDelay" HorizontalAlignment="Left" Height="23" Margin="120,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Text="500" IsEnabled="False"/>
+        <Button Name="ButtonReadSamples" Content="Read Samples" HorizontalAlignment="Left" Margin="13,194,0,0" VerticalAlignment="Top" Width="281" IsEnabled="False" Click="ButtonReadSamples_Click"/>
+        <Button Name="ButtonClearSamples" Content="Clear" HorizontalAlignment="Left" Margin="550,91,0,0" VerticalAlignment="Top" Width="178" Click="ButtonClearSamples_Click"/>
+        <Button Name="ButtonTrainMLP" Content="Train MLP" HorizontalAlignment="Left" Margin="550,167,0,0" VerticalAlignment="Top" Width="178" Click="ButtonTrainMLP_Click"/>
+        <TextBox Name="TextBoxNumberHiddenNeurons" HorizontalAlignment="Left" Height="23" Margin="550,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" Text="10" IsEnabled="False"/>
+        <CheckBox Name="CheckBoxNumberHiddenNeurons" Content="Number of Hidden Neurons" HorizontalAlignment="Left" Margin="550,117,0,0" VerticalAlignment="Top" Click="CheckBoxNumberHiddenNeurons_Click"/>
+        <Button Name="ButtonRemoveSamples" Content="Remove" HorizontalAlignment="Left" Margin="550,64,0,0" VerticalAlignment="Top" Width="178" Click="ButtonRemoveSamples_Click"/>
+        <Button Name="ButtonSaveSamples" Content="Save" HorizontalAlignment="Left" Margin="550,37,0,0" VerticalAlignment="Top" Width="178" Click="ButtonSaveSamples_Click"/>
+        <Button Name="ButtonLoadSamples" Content="Load" HorizontalAlignment="Left" Margin="550,10,0,0" VerticalAlignment="Top" Width="178" Click="ButtonLoadSamples_Click"/>
+        <TextBox Name="TextBoxLog" HorizontalAlignment="Left" Height="230" Margin="13,221,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="715" AcceptsTab="True" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
+        <Button Name="ButtonTestMLP" Content="Test MLP" HorizontalAlignment="Left" Margin="550,194,0,0" VerticalAlignment="Top" Width="178" Click="ButtonTestMLP_Click"/>
+    </Grid>
+</Window>

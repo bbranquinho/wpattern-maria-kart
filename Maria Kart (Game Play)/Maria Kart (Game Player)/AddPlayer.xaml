@@ -1,0 +1,31 @@
+﻿<Window x:Class="Maria_Kart__Game_Player_.AddPlayer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Maria Kart" Height="373" Width="680" WindowStartupLocation="CenterOwner" Icon="Images/Maria Kart (WPattern).ico" Closed="Window_Closed_1">
+    <Grid>
+        <Button Name="ButtonSave" Content="Save" HorizontalAlignment="Left" Margin="74,10,0,0" VerticalAlignment="Top" Width="96" Click="ButtonSave_Click" Height="40"/>
+        <Button Name="ButtonCancel" Content="Cancel" HorizontalAlignment="Left" Margin="202,10,0,0" VerticalAlignment="Top" Width="107" Click="ButtonCancel_Click" Height="40"/>
+        <Button Name="ButtonReset" Content="Reset Calibration" HorizontalAlignment="Left" Margin="114,179,0,0" VerticalAlignment="Top" Width="146" Height="33" Click="ButtonReset_Click" />
+        <Label Content="ID:" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="TextBoxId" HorizontalAlignment="Left" Height="23" Margin="65,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" IsEnabled="False"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="10,83,0,0" VerticalAlignment="Top"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="TextBoxName" HorizontalAlignment="Left" Height="23" Margin="65,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259"/>
+        <TextBox Name="TextBoxEmail" HorizontalAlignment="Left" Height="23" Margin="65,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259"/>
+        <Grid HorizontalAlignment="Left" Height="305" Margin="329,10,0,0" VerticalAlignment="Top" Width="305">
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                <Image Name="ImagePlayer" Margin="0,0,-35,-35" />
+            </Border>
+        </Grid>
+        <TextBox Name="TextBoxLeftHandUp" HorizontalAlignment="Left" Height="37" Margin="65,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20" IsReadOnly="True" />
+        <TextBox Name="TextBoxLeftHandDown" HorizontalAlignment="Left" Height="37" Margin="65,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20" IsReadOnly="True" />
+        <TextBox Name="TextBoxRightHandUp" HorizontalAlignment="Left" Height="37" Margin="202,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20" IsReadOnly="True" />
+        <TextBox Name="TextBoxRightHandDown" HorizontalAlignment="Left" Height="37" Margin="202,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20" IsReadOnly="True" />
+        <TextBox Name="TextBoxAge" HorizontalAlignment="Left" Height="23" Margin="65,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259"/>
+        <Label Content="Left" HorizontalAlignment="Left" Margin="102,212,0,0" VerticalAlignment="Top"/>
+        <Label Content="Right" HorizontalAlignment="Left" Margin="243,212,0,0" VerticalAlignment="Top"/>
+        <Label Content="Up:" HorizontalAlignment="Left" Margin="8,239,0,0" VerticalAlignment="Top"/>
+        <Label Content="Down:" HorizontalAlignment="Left" Margin="8,279,0,0" VerticalAlignment="Top"/>
+        <Label Content="Age:" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

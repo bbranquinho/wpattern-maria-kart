@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <laps>3</laps>
+  <com>COM3</com>
+  <baudRate>3</baudRate>
+  <power>50</power>
+  <penalityMs>1000</penalityMs>
+  <penalitySpeed>10</penalitySpeed>
+  <bonusMs>1000</bonusMs>
+  <bonusSpeed>10</bonusSpeed>
+  <timerInterval>30</timerInterval>
+</settings>

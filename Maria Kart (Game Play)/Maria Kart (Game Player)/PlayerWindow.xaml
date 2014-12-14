@@ -1,0 +1,13 @@
+﻿<Window x:Class="Maria_Kart__Game_Player_.PlayerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Maria Kart" Height="357" Width="548" WindowStartupLocation="CenterOwner" Icon="Images/Maria Kart (WPattern).ico">
+    <Grid>
+        <DataGrid Name="DataGridBestPlayer" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" Height="247" Width="506" IsReadOnly="True" SelectionMode="Single">
+        </DataGrid>
+        <Button Name="ButtonSelectPlayer" Content="Select Player" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="101" Height="32" Click="ButtonSelectPlayer_Click" />
+        <Button Name="ButtonEditPlayer" Content="Edit Player" HorizontalAlignment="Left" Margin="413,10,0,0" VerticalAlignment="Top" Width="103" Height="32" Click="ButtonEditPlayer_Click"/>
+        <Button Name="ButtonAddPlayer" Content="Add Player" HorizontalAlignment="Left" Margin="312,10,0,0" VerticalAlignment="Top" Width="96" Height="32" Click="ButtonAddPlayer_Click"/>
+        <Button Name="ButtonCancel" Content="Cancel" HorizontalAlignment="Left" Margin="116,10,0,0" VerticalAlignment="Top" Width="101" Height="32" Click="ButtonCancel_Click" />
+    </Grid>
+</Window>

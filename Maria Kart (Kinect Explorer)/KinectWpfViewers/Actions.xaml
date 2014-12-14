@@ -1,0 +1,45 @@
+﻿<Window x:Class="Microsoft.Samples.Kinect.WpfViewers.Actions"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Actions" Height="674.451" Width="526.074" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <Grid>
+        <Rectangle Name="rectangleFire" Fill="White" HorizontalAlignment="Left" Height="26" Margin="62,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="228"/>
+        <Rectangle Name="rectangleSpecial" Fill="White" HorizontalAlignment="Left" Height="26" Margin="62,41,0,0" Stroke="Black" VerticalAlignment="Top" Width="228"/>
+        <Rectangle Name="rectangleUp" Fill="White" HorizontalAlignment="Left" Height="52" Margin="150,97,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+        <Rectangle Name="rectangleDown" Fill="White" HorizontalAlignment="Left" Height="52" Margin="151,248,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+        <Rectangle Name="rectangleLeft" Fill="White" HorizontalAlignment="Left" Height="52" Margin="65,174,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+        <Rectangle Name="rectangleRight" Fill="White" HorizontalAlignment="Left" Height="52" Margin="230,174,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+        <Label Name="labelFire" Content="Fire" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Name="labelSpecial"  Content="Special" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+        <Label Name="labelUp" Content="Up" HorizontalAlignment="Left" Margin="167,71,0,0" VerticalAlignment="Top"/>
+        <Label Name="labelLeft"  Content="Left" HorizontalAlignment="Left" Margin="19,185,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.533,0.346"/>
+        <Label Name="labelRight"  Content="Right" HorizontalAlignment="Left" Margin="295,185,0,0" VerticalAlignment="Top"/>
+        <Label Name="labelDown" Content="Down" HorizontalAlignment="Left" Margin="161,300,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="comboBoxBody"  HorizontalAlignment="Left" Margin="335,41,0,0" VerticalAlignment="Top" Width="156" Height="26"/>
+        <Label Name="labelX" Content="X" HorizontalAlignment="Left" Margin="335,72,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <Label x:Name="labelY" Content="Y" HorizontalAlignment="Left" Margin="333,153,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <Label x:Name="labelZ" Content="Z" HorizontalAlignment="Left" Margin="333,232,0,0" VerticalAlignment="Top" FontSize="36"/>
+        <TextBox Name="textBoxX" HorizontalAlignment="Left" Height="57" Margin="371,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="36"/>
+        <TextBox Name="textBoxY" HorizontalAlignment="Left" Height="57" Margin="371,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="36"/>
+        <TextBox Name="textBoxZ" HorizontalAlignment="Left" Height="57" Margin="371,232,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="36"/>
+        <GroupBox Header="Left Wheel" HorizontalAlignment="Left" Margin="19,331,0,0" VerticalAlignment="Top" Height="292" Width="153">
+            <Grid HorizontalAlignment="Left" Width="158" Margin="0,0,-17,5">
+                <TextBox x:Name="textBoxLeftSpeed" HorizontalAlignment="Left" Height="57" Margin="10,16,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="36"/>
+                <TextBox x:Name="textBoxLeftMaxWheel" HorizontalAlignment="Left" Height="57" Margin="10,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="36"/>
+                <TextBox x:Name="textBoxLeftShoulder" HorizontalAlignment="Left" Height="57" Margin="10,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="36"/>
+                <TextBox x:Name="textBoxLeftMinWheel" HorizontalAlignment="Left" Height="57" Margin="10,202,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="36"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Right Wheel" HorizontalAlignment="Left" Margin="190,331,0,0" VerticalAlignment="Top" Height="292" Width="153">
+            <Grid HorizontalAlignment="Left" Width="158" Margin="0,0,-17,5">
+                <TextBox x:Name="textBoxRightSpeed" HorizontalAlignment="Left" Height="57" Margin="10,16,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="36"/>
+                <TextBox x:Name="textBoxRightMaxWheel" HorizontalAlignment="Left" Height="57" Margin="10,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="36"/>
+                <TextBox x:Name="textBoxRightShoulder" HorizontalAlignment="Left" Height="57" Margin="10,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="36"/>
+                <TextBox x:Name="textBoxRightMinWheel" HorizontalAlignment="Left" Height="57" Margin="10,202,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="36"/>
+            </Grid>
+        </GroupBox>
+        <TextBox Name="textBoxComConnection" HorizontalAlignment="Left" Height="57" Margin="371,363,0,0" TextWrapping="Wrap" Text="COM10" VerticalAlignment="Top" Width="120" FontSize="30"/>
+        <Button Name="buttonOpenComConnection" Content="Open" HorizontalAlignment="Left" Margin="371,487,0,0" VerticalAlignment="Top" Width="120" Height="57" Click="buttonOpenComConnection_Click" FontSize="32"/>
+        <ComboBox Name="comboBoxBaudRate" HorizontalAlignment="Left" Margin="371,426,0,0" VerticalAlignment="Top" Width="120" Height="57" FontSize="32"/>
+    </Grid>
+</Window>

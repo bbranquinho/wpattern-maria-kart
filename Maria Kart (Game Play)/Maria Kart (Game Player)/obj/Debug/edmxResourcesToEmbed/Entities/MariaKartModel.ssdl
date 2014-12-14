@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MariaKartModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MariaKartModelStoreContainer">
+    <EntitySet Name="tb_character" EntityType="MariaKartModel.Store.tb_character" store:Type="Tables" Schema="maria_kart" />
+    <EntitySet Name="tb_player" EntityType="MariaKartModel.Store.tb_player" store:Type="Tables" Schema="maria_kart" />
+    <EntitySet Name="tb_race" EntityType="MariaKartModel.Store.tb_race" store:Type="Tables" Schema="maria_kart" />
+    <AssociationSet Name="fk_tb_character_tb_race1" Association="MariaKartModel.Store.fk_tb_character_tb_race1">
+      <End Role="tb_race" EntitySet="tb_race" />
+      <End Role="tb_character" EntitySet="tb_character" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tb_race_tb_player" Association="MariaKartModel.Store.fk_tb_race_tb_player">
+      <End Role="tb_player" EntitySet="tb_player" />
+      <End Role="tb_race" EntitySet="tb_race" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tb_character">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="speed" Type="int" Nullable="false" />
+    <Property Name="breaking" Type="int" Nullable="false" />
+    <Property Name="acceleration" Type="int" Nullable="false" />
+    <Property Name="picture" Type="blob" />
+    <Property Name="tb_race_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_player">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="age" Type="int" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="picture" Type="blob" />
+    <Property Name="leftHandUp" Type="double" />
+    <Property Name="leftHandDown" Type="double" />
+    <Property Name="rightHandUp" Type="double" />
+    <Property Name="rightHandDown" Type="double" />
+  </EntityType>
+  <EntityType Name="tb_race">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idPlayer" Type="int" Nullable="false" />
+    <Property Name="date" Type="datetime" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="totalTime" Type="time" Nullable="false" />
+    <Property Name="bestLapsTime" Type="time" Nullable="false" />
+    <Property Name="totalLaps" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_tb_character_tb_race1">
+    <End Role="tb_race" Type="MariaKartModel.Store.tb_race" Multiplicity="1" />
+    <End Role="tb_character" Type="MariaKartModel.Store.tb_character" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_race">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tb_character">
+        <PropertyRef Name="tb_race_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tb_race_tb_player">
+    <End Role="tb_player" Type="MariaKartModel.Store.tb_player" Multiplicity="1" />
+    <End Role="tb_race" Type="MariaKartModel.Store.tb_race" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_player">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tb_race">
+        <PropertyRef Name="idPlayer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
